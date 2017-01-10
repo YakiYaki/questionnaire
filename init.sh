@@ -17,7 +17,7 @@ apt-get install -y nginx python3 python3.5-dev python3-pip libpq-dev libpcre3 li
 cd /
 mkdir $root_path
 cd $root_path
-mv /$project_name .
+mv /$project_name/$project_name .
 mkdir media
 mkdir static
 
