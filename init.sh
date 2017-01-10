@@ -29,6 +29,7 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 chmod a+w manager.log
 
+mkdir /var/log/uwsgi
 mkdir /var/uwsgi
 mkdir /var/uwsgi/log
 chown www-data:www-data -R /var/uwsgi
@@ -49,5 +50,3 @@ uwsgi --ini /$root_path/$project_name/conf/uwsgi.ini
 service nginx restart
 
 echo -e "\n [DONE]"
-
-exit 0
