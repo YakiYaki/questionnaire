@@ -18,9 +18,8 @@ cd /
 mkdir $root_path
 cd $root_path
 mv /$project_name .
-mkdir media
-mkdir static
 cd $project_name
+mkdir log
 
 # Устанавливаем необходимые компоненты
 pip3 install -r conf/requirements.txt
@@ -44,12 +43,11 @@ chmod g+rxw -R *
 cd /etc/nginx/sites-enabled
 unlink default
 rm /etc/nginx/sites-available/default
-ln -s /$root_path/conf/nginx.conf /etc/nginx/sites-enabled/
+ln -s /$root_path/$project_name/conf/nginx.conf /etc/nginx/sites-enabled/
 
-uwsgi --ini conf/uwsgi.ini
+uwsgi --ini /$root_path/$project_name/conf/uwsgi.ini
 service nginx restart
 
 echo -e "\n [DONE]"
-
 
 exit 0
