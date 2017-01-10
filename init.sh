@@ -17,17 +17,12 @@ apt-get install -y nginx python3 python3.5-dev python3-pip libpq-dev libpcre3 li
 cd /
 mkdir $root_path
 cd $root_path
-mv /$project_name/$project_name .
-mv /$project_name/conf .
+mv /$project_name .
+mkdir media
+mkdir static
 
 # Устанавливаем необходимые компоненты
 pip3 install -r conf/requirements.txt
-
-mv conf/gunicorn.service /etc/systemd/system/gunicorn.service
-
-cd $project_name
-mkdir media
-mkdir static
 
 # Настраиваем приложение и создаем суперпользователя
 python3 manage.py makemigrations
@@ -48,8 +43,12 @@ chmod g+rxw -R *
 cd /etc/nginx/sites-enabled
 unlink default
 rm /etc/nginx/sites-available/default
-ln -s /app/conf/CM-nginx1.conf /etc/nginx/sites-enabled/
+ln -s /$root_path/conf/nginx.conf /etc/nginx/sites-enabled/
+
+uwsgi --ini conf/uwsgi.ini
+service nginx restart
 
 echo -e "\n [DONE]"
+
 
 exit 0
