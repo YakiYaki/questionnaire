@@ -1,0 +1,45 @@
+
+.input-form-wrapper .num-input-wrapper {
+    width: 270px;
+    margin: 20px auto 0 auto;
+}
+
+.num-input {
+    width: 130px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 0.7em;
+    margin: 0 auto;
+    border: none;
+    border-bottom: solid 1px #6b6b6b;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: #87acff;
+}
+
+.num-input:focus {
+    border: none;
+    border-bottom: solid 1px #87acff;
+    outline: none;
+}
+
+.input-form-wrapper .num-input-wrapper label {
+    font-size: 0.8em;
+}
+
+.tip-wrapper, .add-cap {
+    font-size: 0.4em;
+    font-weight: 300;
+    margin: 20px 0 5px 30px;
+    color: #e1857c;
+}
+
+.tip-wrapper .tip-list {
+    color: #1c1c1c;
+    list-style-type: none;
+    margin: 10px 5px 5px 55px;
+}
+
+.tip-list .tip {
+    margin-top: 3px;
+}

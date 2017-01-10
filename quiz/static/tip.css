@@ -1,0 +1,15 @@
+
+.tip-form-wrapper .tip-wrapper {
+    max-width: 550px;
+}
+
+.tip-form-wrapper .tip-list {
+    margin: 0 0 0 24px;
+    list-style-type: decimal;
+}
+
+.tip-form-wrapper .tip-list .tip {
+    font-size: 2em;
+    font-weight: 100;
+    margin-top: 5px;
+}

@@ -1,0 +1,24 @@
+<p class="q" >{{ cap }}</p>
+<div class="input-form-wrapper">
+    <form action="/" class="yes" method="get">
+        <div class="num-input-wrapper">
+            <input type="text" placeholder="1000" class="num-input" name="num" value="">
+            <label for="num-input" class="q-label">{{ input_cap }}</label>
+        </div>
+        {% if tip_cap != "" %}
+            <div class="tip-wrapper">
+                <p class="tip-cap">{{ tip_cap }}:</p>
+                <ul class="tip-list">
+                    {% for t in tips.values %}
+                        <li class="tip">{{ t }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        {% if add_cap != "" %}
+            <p class="add-cap">{{ add_cap }}</p>
+        {% endif %}
+        <input type="submit" value="">
+        <input type="hidden" name="fn" value="{{ fn_next }}">
+    </form>
+</div>

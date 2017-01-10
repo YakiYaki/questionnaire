@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.parent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+
+.block {
+    background: inherit;
+    padding: 20px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 2.2em;
+}
+
+.block .q {
+    text-align: center;
+}
+
+input[type='submit'] {
+    background: rgba(98, 176, 64, 0.9);
+    border: none;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    margin: 5px 20px 0 0;
+    float: right;
+}

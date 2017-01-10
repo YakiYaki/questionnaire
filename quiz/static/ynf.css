@@ -1,0 +1,30 @@
+block .q {
+    margin: 25px 55px 10px;
+}
+
+.yesnoform {
+    padding: 10px;
+    margin: 0 auto;
+    width: 100px;
+}
+
+.yesnoform #qn {
+    background: #e1857c;
+}
+.yesnoform #qy {
+    background: rgba(98, 176, 64, 0.9);
+}
+
+.yesnoform #qy, .yesnoform  #qn {
+    border: none;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    margin: 10px 5px 10px 0px;
+    padding-top: 5px;
+    float: none;
+}
+
+.yesnoform .qlabel {
+    margin-top: -5px;
+}

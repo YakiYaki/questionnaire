@@ -1,0 +1,15 @@
+<p class="q" >{{ cap }}</p>
+<div class="yesnoform">
+    <form action="/" class="yes" method="get">
+        <input type="submit" value="" id="qy">
+        <input type="hidden" name="ans" value="yes">
+        <input type="hidden" name="fn" value="{{ fn_next }}">
+        <label for="qy" class="qlabel">Yes</label>
+    </form>
+    <form action="/" class="no" method="get">
+        <input type="submit" value="" id="qn">
+        <input type="hidden" name="ans" value="no">
+        <input type="hidden" name="fn" value="{{ fn_next }}">
+        <label for="qn" class="qlabel">No</label>
+    </form>
+</div>

@@ -1,0 +1,17 @@
+
+.check-wrapper {
+    font-size: 0.7em;
+    margin: 20px auto 0 auto;
+    max-width: 450px;
+}
+
+.check-wrapper .item {
+    display: block;
+    margin-top: 12px;
+    margin-left: 20px;
+}
+
+.check-wrapper .item input[type='checkbox'] {
+    width: 16px;
+    height: 16px;
+}
