@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" http-equiv="content-type" content="text/html">
+    <link type="text/css" href="{% static 'base.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:100,300,500&amp;subset=cyrillic-ext" rel="stylesheet">
+    <title>RESTBEST | Questionnaire</title>
+    {% block css %} {% endblock %}
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+        <footer>
+            <div class="logo">
+                <a href="/">
+                    <img src="media/logo_name.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/contacts">Contacts</a></li>
+                </ul>
+            </div>
+            {% block footer-content %}{% endblock %}
+        </footer>
+    </div>
+</body>
+</html>

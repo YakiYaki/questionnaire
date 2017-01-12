@@ -1,30 +1,43 @@
-block .q {
-    margin: 25px 55px 10px;
-}
-
-.yesnoform {
+.yes-no-form {
     padding: 10px;
     margin: 0 auto;
-    width: 100px;
+    width: 160px;
 }
 
-.yesnoform #qn {
-    background: #e1857c;
-}
-.yesnoform #qy {
-    background: rgba(98, 176, 64, 0.9);
+.yes-no-form .yes, .yes-no-form .no {
+    display: inline-block;
 }
 
-.yesnoform #qy, .yesnoform  #qn {
-    border: none;
-    border-radius: 15px;
-    width: 30px;
-    height: 30px;
-    margin: 10px 5px 10px 0px;
-    padding-top: 5px;
+.yes-no-form #qn {
+    color: #cb746b;
+}
+.yes-no-form #qn:hover {
+    border-bottom: solid 1px #cb746b;
+    padding-bottom: 1px;
+}
+.yes-no-form #qy {
+    color: #7ACD44;
+}
+.yes-no-form #qy:hover {
+    border-bottom: solid 1px #7ACD44;
+    padding-bottom: 1px;
+}
+
+.yes-no-form input[type="submit"] {
+    border-radius: 0;
+    background: inherit;
+    width: 70px;
+    height: 50px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 0.9em;
+    margin: 5px 5px 10px 0px;
     float: none;
+    cursor: pointer;
+    border: none;
 }
 
-.yesnoform .qlabel {
-    margin-top: -5px;
+.yes-no-form input[type="submit"]:focus {
+    border: none;
+    outline: none;
 }

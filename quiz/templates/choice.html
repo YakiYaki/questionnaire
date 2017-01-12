@@ -1,13 +1,13 @@
-<p class="q" >{{ cap }}</p>
-<div class="choiceform">
-    <form action="/" class="yes" method="get">
-        {% for key, val in vars.items %}
-            <input class="radios" type="radio" name="cuisine" value="{{ val }}" id="{{ key }}var" {% if forloop.first %}
-                checked
-            {% endif %}>
-            <label for="{{ key }}var" class="qlabel">{{ val }}</label> <br>
-        {% endfor %}
-        <input type="submit" value=">" id="qy">
-        <input type="hidden" name="fn" value="{{ fn_next }}">
-    </form>
-</div>
+<form action="/questionnaire" method="get" class="simple-form choice-form">
+    {% for key, val in vars.items %}
+        <input class="radios" type="radio" name="cuisine" value="{{ val }}" id="{{ key }}var" {% if forloop.first %}
+            checked
+        {% endif %}>
+        <label for="{{ key }}var">{{ val }}</label><br>
+    {% endfor %}
+    <input type="submit" value="" class="next">
+    <input type="hidden" name="fn" value="{{ fn_next }}">
+    {% if target == True %}
+        <input type="hidden" name="target" value="1">
+    {% endif %}
+</form>

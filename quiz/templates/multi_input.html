@@ -1,33 +1,30 @@
-<p class="q" >{{ cap }}</p>
-<div class="input-form-wrapper">
-    <form action="/" method="get">
-        <div class="num-input-wrapper">
-            <input type="text" placeholder="1000" class="num-input" name="num" value="">
-            <label for="num-input" class="q-label">{{ input_cap }}</label>
-        </div>
-        <div class="add-inputs">
-            {% for k, v in add_inputs.items %}
-                <div class="add-item">
-                    <p class="add-input-name">{{ k }}</p>
-                    <input type="text" name="{{ k }}" id="i{{ forloop.counter }}" class="num-input" placeholder="100">
-                    <label for="i{{ forloop.counter }}">{{ v }}</label>
-                </div>
-            {% endfor %}
-        </div>
-        {% if tip_cap != "" %}
-            <div class="tip-wrapper">
-                <p class="tip-cap">{{ tip_cap }}:</p>
-                <ul class="tip-list">
-                    {% for t in tips.values %}
-                        <li class="tip">{{ t }}</li>
-                    {% endfor %}
-                </ul>
+<form action="/questionnaire" method="get" class="simple-form input-form">
+    <div class="num-input-wrapper">
+        <input type="text" placeholder="1000" class="num-input" name="num" value="">
+        <label for="num-input" class="q-label">{{ input_cap }}</label>
+    </div>
+    <div class="add-inputs">
+        {% for k, v in add_inputs.items %}
+            <div class="add-item">
+                <p class="add-input-name">{{ k }}</p>
+                <input type="text" name="{{ k }}" id="i{{ forloop.counter }}" class="num-input" placeholder="100">
+                <label for="i{{ forloop.counter }}">{{ v }}</label>
             </div>
-        {% endif %}
-        {% if add_cap != "" %}
-            <p class="add-cap">{{ add_cap }}</p>
-        {% endif %}
-        <input type="submit" value="">
-        <input type="hidden" name="fn" value="{{ fn_next }}">
-    </form>
-</div>
+        {% endfor %}
+    </div>
+    {% if tip_cap != "" %}
+        <div class="tip-wrapper">
+            <p class="tip-cap">{{ tip_cap }}:</p>
+            <ul class="tip-list">
+                {% for t in tips.values %}
+                    <li class="tip">{{ t }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    {% if add_cap != "" %}
+        <p class="add-cap">{{ add_cap }}</p>
+    {% endif %}
+    <input type="submit" value="" class="next">
+    <input type="hidden" name="fn" value="{{ fn_next }}">
+</form>

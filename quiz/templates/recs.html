@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link type="text/css" href="{% static 'recs.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <div class="rec-tables">
+        <table class="rec-table">
+            <tr>
+                <th class="small">Area of improvement: F&B</th>
+                <th class="big">Recommendations</th>
+            </tr>
+            <tr>
+                <td class="name">Menu</td>
+                <td class="big">
+                    <ul>
+                        <li>In 2 languages (German and English) -> make sure the items correspond in all languages</li>
+                        <li>Easy to understand</li>
+                        <li>Pictures of dishes are welcome</li>
+                        <li>Menu not overloaded with items</li>
+                        <li>Presence of items with food restrictions (ex. Vegetarian/ no gluten etc.)</li>
+                        <li>Substitutions availability</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="name">Food</td>
+                <td class="big">
+                    <ul>
+                        <li>Good quality standards</li>
+                        <li>Not overcooked/ indercooked</li>
+                        <li>Freshness</li>
+                        <li>Reasonable time of preparation</li>
+                        <li>Dishes should correspond to their price (adequate price-performance ratio)</li>
+                        <li>Size of the portions should be adequate to the theme of the establishment -> don't give more than expected</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <table class="rec-table">
+            <tr>
+                <th class="small">Area of improvement: Atmosphere</th>
+                <th class="big">Recommendations</th>
+            </tr>
+            <tr>
+                <td class="name">Design</td>
+                <td class="big">
+                    <ul>
+                        <li>Cozy, feeling of being home</li>
+                        <li>Pleasant, in line with theme colours</li>
+                        <li>Nice decorations in line with theme</li>
+                        <li>Enough lightening (preferebly warm), windows</li>
+                        <li>Comfortable ambience</li>
+                        <li>Enjoyable atmosphere</li>
+                        <li>Customers should feel authenticity if it is your point of differentiation</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="name">Service / Staff</td>
+                <td class="big">
+                    <ul>
+                        <li>Polite, friendly, attentive</li>
+                        <li>Helpful -> not enough to simply smile, you should be able to advise the customer</li>
+                        <li>Reasonable time of service</li>
+                        <li>Professional attitude</li>
+                        <li>Clear and adequate allocation of duties among staff</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="name">Cleanliness</td>
+                <td class="big">
+                    <ul>
+                        <li>Floor & tables should be wiped on a regular basis</li>
+                        <li>Clean dishes and glasses</li>
+                        <li>Toilet should be clean (presence of toilet paper, soap and paper towels) and preferably in good condition</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <table class="rec-table">
+            <tr>
+                <th class="small">Area of improvement: Communication</th>
+                <th class="big">Recommendations</th>
+            </tr>
+            <tr>
+                <td class="name">Communication with customers</td>
+                <td class="big">
+                    <ul>
+                        <li>Clearly state your rules/ regulations concerning small children, animals</li>
+                        <li>Communicate all of your policies that may differ from habitual (ex: if you do not allow and use of WiFi or technology devices)</li>
+                        <li>Pictures of dishes are welcome</li>
+                        <li>Give clear directions how to access your establishement</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="name">External communication</td>
+                <td class="big">
+                    <ul>
+                        <li>Establish good relationships with hotels/ shopping centres nearby for them to recommend you</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
+{% block footer-content %}
+    <form action="/recommends">
+        <input type="submit" value="Download your checklist" class="download-button">
+    </form>
+{% endblock %}

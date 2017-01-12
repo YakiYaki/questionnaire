@@ -1,44 +1,10 @@
+{% extends "base.html" %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" http-equiv="content-type" content="text/html">
-    <link type="text/css" href="{% static 'base.css' %}" rel="stylesheet">
-    <link type="text/css" href="{% static 'ynf.css' %}" rel="stylesheet">
-    <link type="text/css" href="{% static 'choice.css' %}" rel="stylesheet">
-    <link type="text/css" href="{% static 'check.css' %}" rel="stylesheet">
-    <link type="text/css" href="{% static 'multi_input.css' %}" rel="stylesheet">
-    <link type="text/css" href="{% static 'input.css' %}" rel="stylesheet">
-    <link type="text/css" href="{% static 'map.css' %}" rel="stylesheet">
-    <link type="text/css" href="{% static 'tip.css' %}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:100,300,500&amp;subset=cyrillic-ext" rel="stylesheet">
-    <title>Quiz</title>
-</head>
-<body>
-    <div class="parent">
-        <div class="block">
-            {% if type == "yn" %}
-                {% include "ynf.html" %}
-            {% endif %}
-            {% if type == "choice" %}
-                {% include "choice.html" %}
-            {% endif %}
-            {% if type == "check" %}
-                {% include "check.html" %}
-            {% endif %}
-            {% if type == "input" %}
-                {% include "input.html" %}
-            {% endif %}
-            {% if type == "tips" %}
-                {% include "tip.html" %}
-            {% endif %}
-            {% if type == "multi_input" %}
-                {% include "multi_input.html" %}
-            {% endif %}
-            {% if type == "map" %}
-                {% include "map.html" %}
-            {% endif %}
-        </div>
-    </div>
-</body>
-</html>
+{% block css %}
+    <link type="text/css" href="{% static 'index.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <form action="/questionnaire" class="start-form">
+        <input type="submit" value="Start">
+    </form>
+{% endblock %}

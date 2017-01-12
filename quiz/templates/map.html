@@ -1,10 +1,10 @@
-<p class="q" >{{ cap }}</p>
-<div class="map-form-wrapper">
-    <form action="/" method="get">
-        <div class="map-wrapper">
-
-        </div>
-        <input type="submit" value="">
+<form action="/questionnaire" method="get" class="simple-form map-form">
+    <div id="map">
+        <script src="../static/map.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDToPhVFeRBJSaD6SYsBpmDTuowcmpG120&callback=myMap"></script>
+    </div>
+    <div class="input-wrapper">
+        <input type="submit" value="" class="next">
         <input type="hidden" name="fn" value="{{ fn_next }}">
-    </form>
-</div>
+    </div>
+</form>

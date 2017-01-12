@@ -1,23 +1,9 @@
-.choiceform label {
+.choice-form label {
     font-size: 0.7em;
 }
 
-.choiceform .q {
-    margin-bottom: 5px;
-}
-
-.choiceform .radios {
+.choice-form .radios {
     width: 20px;
     height: 20px;
     margin-left: 30px;
-}
-
-.choiceform #qy {
-    background: rgba(98, 176, 64, 0.9);
-    border: none;
-    border-radius: 15px;
-    width: 30px;
-    height: 30px;
-    margin: 10px auto;
-    float: right;
 }

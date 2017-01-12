@@ -1,18 +1,12 @@
+{% extends "base.html" %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" http-equiv="content-type" content="text/html">
-    <link type="text/css" href="{% static 'base.css' %}" rel="stylesheet">
+
+{% block css %}
     <link type="text/css" href="{% static 'done.css' %}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:100,300,500&amp;subset=cyrillic-ext" rel="stylesheet">
-    <title>Quiz</title>
-</head>
-<body>
-    <div class="parent">
-        <div class="block">
-            <p>Decision</p>
-        </div>
-    </div>
-</body>
-</html>
+{% endblock %}
+{% block content %}
+    <h3>Decision</h3>
+    <form action="/recommends" class="simple-form rec-form">
+        <input type="submit" value="See recommendations">
+    </form>
+{% endblock %}

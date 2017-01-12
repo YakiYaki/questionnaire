@@ -1,0 +1,76 @@
+
+.container .content {
+    margin-top: 0;
+    text-align: center;
+}
+
+.rec-table {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 0.4em;
+    border-collapse: separate;
+    border-spacing: 5px 6px;
+    color: #515151;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.rec-table th {
+    font-weight: 500;
+    height: 50px;
+    background: #fae100;
+
+}
+
+.rec-table .small {
+    width: 100px;
+    padding: 10px 20px;
+}
+
+.rec-table .big {
+    width: 200px;
+    padding: 10px 20px;
+}
+
+.rec-table td {
+    font-weight: 300;
+    font-size: 0.9em;
+    max-width: 200px;
+    text-align: left;
+    background: #d9d9d9;
+}
+
+.rec-table .name {
+    text-align: center;
+}
+
+.rec-table td ul {
+    margin-left: 20px;
+}
+
+footer form {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 80px;
+}
+
+.download-button {
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    background: inherit;
+    cursor: pointer;
+    margin-left: 40px;
+    color: #3a3a3a;
+}
+
+.download-button:hover {
+    border-bottom: solid 2px #fff533;
+}
+
+.download-button:focus {
+    outline: none;
+}

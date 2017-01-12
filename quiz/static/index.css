@@ -1,23 +1,23 @@
 
-.rec-form {
+.start-form {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-.rec-form input {
+.start-form input {
     border: none;
     font-family: "Roboto", sans-serif;
     font-weight: 100;
-    font-size: 0.6em;
+    font-size: 2em;
     background: inherit;
     cursor: pointer;
 }
 
-.rec-form input:focus {
+.start-form input:focus {
     outline: none;
 }
 
-.rec-form input:hover {
+.start-form input:hover {
     border-bottom: solid 2px #fff533;
     /* color: #fff533; */
 }

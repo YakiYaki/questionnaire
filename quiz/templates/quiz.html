@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link type="text/css" href="{% static 'ynf.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'choice.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'check.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'multi_input.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'input.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'tip.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'map.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <h3>{{ cap }}</h3>
+    {% if type == "yn" %}
+        {% include "ynf.html" %}
+    {% endif %}
+    {% if type == "choice" %}
+        <style>
+            .container .content {
+                margin-top: 120px;
+            }
+        </style>
+        {% include "choice.html" %}
+    {% endif %}
+    {% if type == "check" %}
+        <style>
+            .container .content {
+                margin-top: 36px;
+            }
+        </style>
+        {% include "check.html" %}
+    {% endif %}
+    {% if type == "input" %}
+        {% include "input.html" %}
+    {% endif %}
+    {% if type == "tips" %}
+        <style>
+            .simple-form {
+                width: 600px;
+            }
+        </style>
+        {% include "tip.html" %}
+    {% endif %}
+    {% if type == "multi_input" %}
+        {% include "multi_input.html" %}
+    {% endif %}
+    {% if type == "map" %}
+        <style>
+            .container .content {
+                margin-top: 80px;
+            }
+        </style>
+        {% include "map.html" %}
+    {% endif %}
+{% endblock %}

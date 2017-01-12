@@ -1,24 +1,33 @@
-<p class="q" >{{ cap }}</p>
-<div class="input-form-wrapper">
-    <form action="/" class="yes" method="get">
-        <div class="num-input-wrapper">
-            <input type="text" placeholder="1000" class="num-input" name="num" value="">
-            <label for="num-input" class="q-label">{{ input_cap }}</label>
+<form action="/questionnaire" method="get" class="simple-form input-form">
+    <div class="num-input-wrapper">
+        <input type="text" placeholder="1000" class="num-input" name="num" value="">
+        <label for="num-input" class="q-label">{{ input_cap }}</label>
+    </div>
+    {% if tip_cap != "" and tip_type == "text" %}
+        <div class="tip-wrapper">
+            <p class="tip-cap">{{ tip_cap }}:</p>
+            <ul class="tip-list">
+                {% for t in tips.values %}
+                    <li class="tip">{{ t }}</li>
+                {% endfor %}
+            </ul>
         </div>
-        {% if tip_cap != "" %}
-            <div class="tip-wrapper">
-                <p class="tip-cap">{{ tip_cap }}:</p>
-                <ul class="tip-list">
-                    {% for t in tips.values %}
-                        <li class="tip">{{ t }}</li>
-                    {% endfor %}
-                </ul>
+    {% elif tip_cap != "" and tip_type == "choice" %}
+        <div class="tip-wrapper">
+            <p class="tip-cap">{{ tip_cap }}:</p>
+            <div class="tip-list">
+                {% for t in tips.values %}
+                    <div class="tip-checkbox">
+                        <input type="checkbox" name="c-tip{{ forloop.counter }}" class="tip" id="c-tip{{ forloop.counter }}">
+                        <label for="c-tip{{ forloop.counter }}">{{ t }}</label>
+                    </div>
+                {% endfor %}
             </div>
-        {% endif %}
-        {% if add_cap != "" %}
-            <p class="add-cap">{{ add_cap }}</p>
-        {% endif %}
-        <input type="submit" value="">
-        <input type="hidden" name="fn" value="{{ fn_next }}">
-    </form>
-</div>
+        </div>
+    {% endif %}
+    {% if add_cap != "" %}
+        <p class="add-cap">{{ add_cap }}</p>
+    {% endif %}
+    <input type="submit" value="" class="next">
+    <input type="hidden" name="fn" value="{{ fn_next }}">
+</form>

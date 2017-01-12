@@ -1,16 +1,13 @@
-<p class="q" >{{ cap }}</p>
-<div class="check-form-wrapper">
-    <form action="/" method="get">
-        <div class="check-wrapper">
-            <p class="check-cap">Please check the following:</p>
-            {% for k, v in vars.items %}
-                <div class="item">
-                    <input type="checkbox" name="i{{ k }}" checked>
-                    <label for="i{{ k }}">{{ v }}</label>
-                </div>
-            {% endfor %}
-        </div>
-        <input type="submit" value="">
-        <input type="hidden" name="fn" value="{{ fn_next }}">
-    </form>
-</div>
+<form action="/questionnaire" method="get" class="simple-form check-form">
+    <div class="check-wrapper">
+        <p class="check-cap">Please check the following:</p>
+        {% for k, v in vars.items %}
+            <div class="item">
+                <input type="checkbox" name="i{{ k }}" checked>
+                <label for="i{{ k }}">{{ v }}</label>
+            </div>
+        {% endfor %}
+    </div>
+    <input type="submit" value="" class="next">
+    <input type="hidden" name="fn" value="{{ fn_next }}">
+</form>

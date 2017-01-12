@@ -1,14 +1,11 @@
-<p class="q" >{{ tip_cap }}</p>
-<div class="tip-form-wrapper">
-    <form action="/" method="get">
-        <div class="tip-wrapper">
-            <ul class="tip-list">
-                {% for t in tips.values %}
-                    <li class="tip">{{ t }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        <input type="submit" value="">
-        <input type="hidden" name="fn" value="{{ fn_next }}">
-    </form>
-</div>
+<form action="/questionnaire" method="get" class="simple-form tip-form">
+    <div class="tip-wrapper">
+        <ul class="tip-list">
+            {% for t in tips.values %}
+                <li class="tip">{{ t }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <input type="submit" value="" class="next">
+    <input type="hidden" name="fn" value="{{ fn_next }}">
+</form>

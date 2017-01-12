@@ -1,15 +1,14 @@
-<p class="q" >{{ cap }}</p>
-<div class="yesnoform">
-    <form action="/" class="yes" method="get">
-        <input type="submit" value="" id="qy">
+<div class="yes-no-form">
+    <form action="/questionnaire" class="yes" method="get">
+        <input type="submit" value="Yes" id="qy">
         <input type="hidden" name="ans" value="yes">
         <input type="hidden" name="fn" value="{{ fn_next }}">
-        <label for="qy" class="qlabel">Yes</label>
+        <!-- <label for="qy" class="qlabel">Yes</label> -->
     </form>
-    <form action="/" class="no" method="get">
-        <input type="submit" value="" id="qn">
+    <form action="/questionnaire" class="no" method="get">
+        <input type="submit" value="No" id="qn">
         <input type="hidden" name="ans" value="no">
         <input type="hidden" name="fn" value="{{ fn_next }}">
-        <label for="qn" class="qlabel">No</label>
+        <!-- <label for="qn" class="qlabel">No</label> -->
     </form>
 </div>
