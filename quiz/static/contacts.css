@@ -1,11 +1,15 @@
 
 .container .content {
-    margin-top: 90px;
+    margin-top: 75px;
 }
 
 .container .content .authors h2 {
     font-size: 0.8em;
     font-weight: 300;
+}
+
+.authors {
+    text-align: center;
 }
 
 .authors #school, .authors #team {
@@ -15,4 +19,34 @@
 .authors h3 {
     font-size: 0.8em;
     padding: 5px 0;
+}
+
+.authors .left, .authors .right, .authors .middle {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.authors .middle {
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+.authors .school-img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.authors .metro-img {
+    height: 45px;
+    margin-top: 15px;
+    float: none;
+}
+
+.authors .team-img {
+    width: 380px;
+    margin: 20px 10px;
+}
+
+.authors .names {
+    margin-top: 30px;
 }
