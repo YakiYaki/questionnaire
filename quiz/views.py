@@ -125,7 +125,7 @@ def quiz(request):
             elif q_num == '19':
                 return render_question(request, "What are your maintenance costs?", 20, 'input', input_cap="seats")
             elif q_num == '20':
-                return render_question(request, "How many are there employees?", 21, 'multi_input', input_cap="euro",
+                return render_question(request, "How many are there employees?", 21, 'multi_input', input_cap="employees",
                                        add_inputs={'Labour costs': '%'})
             elif q_num == '21':
                 return render_question(request, "Do you do marketing?", 22, 'yn')
@@ -231,7 +231,7 @@ def quiz(request):
             return render_question(request, "What are your marketing costs?", 24, 'input', input_cap="euro")
         elif q_num == '24':
             return render_question(request,
-                                   "Will you register your restaurant in the following social media platforms?", 25,
+                                   "Will you register your restaurant on the following social media platforms?", 25,
                                    'check',
                                    vars=social_media_platforms, icons=True)
         elif q_num == '25':

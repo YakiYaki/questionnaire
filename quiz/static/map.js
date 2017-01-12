@@ -4,7 +4,7 @@
 
 function myMap() {
     var mapCanvas = document.getElementById("map");
-    var london = new google.maps.LatLng(51.5, -0.2);
+    var london = new google.maps.LatLng(52.520008, 13.404954);
     var mapOptions = {
         center: london,
         zoom: 10
