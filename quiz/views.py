@@ -15,7 +15,7 @@ licenses = {'1': 'Business license',
 cuisines = {'1': 'Pizzeria/Italian',
             '2': 'Asian',
             '3': 'Burgers/American',
-            '4': 'Latin America',
+            '4': 'Latin American',
             '5': 'Eastern',
             '6': 'German',
             '7': 'French',
@@ -33,7 +33,7 @@ things = {'1': 'Fire',
 trends = {'1': 'Storytelling experience',
           '2': 'Niche Targeting',
           '3': 'Celebrity Chef',
-          '4': 'Latin America cuisine and culture',
+          '4': 'Latin American cuisine and culture',
           '5': 'Housemade products'}
 pricing_tips = {'1': 'Cost-Plus Pricing = overhead costs + profit margin',
                 '2': 'Consider "good, better, best" strategy',
@@ -43,7 +43,7 @@ pricing_tips = {'1': 'Cost-Plus Pricing = overhead costs + profit margin',
                 '6': 'Place prices after the descriptions of the dishes',
                 '7': 'Take out the price sign of the menu'}
 supplier_tips = {'1': 'Make a detailed list of everything you need (equipment, furnishing, dinnerware, etc.)',
-                 '2': 'Industry association can help in finding suppliers',
+                 '2': 'Industry association can help to find suppliers',
                  '3': 'Check legitimacy of a supplier'}
 consider_points = {'1': 'Marketing plan',
                    '2': 'Social media: TripAdvisor, Yelp, Opentable, Facebook, Instagram',
@@ -123,9 +123,9 @@ def quiz(request):
                 return render_question(request, "What are the total costs?", 19, 'multi_input', input_cap="euro",
                                        add_inputs={'Food': '%', 'Beverage': '%'})
             elif q_num == '19':
-                return render_question(request, "What are your maintenance costs?", 20, 'input', input_cap="seats")
+                return render_question(request, "What are your maintenance costs?", 20, 'input', input_cap="euro")
             elif q_num == '20':
-                return render_question(request, "How many are there employees?", 21, 'multi_input', input_cap="employees",
+                return render_question(request, "How many employees are there?", 21, 'multi_input', input_cap="employees",
                                        add_inputs={'Labour costs': '%'})
             elif q_num == '21':
                 return render_question(request, "Do you do marketing?", 22, 'yn')
